@@ -17,12 +17,12 @@ dyh::~dyh()
 
 double dyh::f(double x)
 {
-    return (x*x)/4 + x - 1.2502;
+    return 3 * sin(sqrt(x)) + 0.35 * x - 3.8;
 }
 
 double dyh::df(double x)
 {
-    return x/2+1;
+    return (3 * cos(sqrt(x))) / (2 * sqrt(x)) + 0.35;
 }
 
 void dyh::inter(double a1, double b1)
@@ -41,7 +41,7 @@ double dyh::dihh()
     double l = a;
     double r = b;
 
-    if(f(l) * f(r)>0)
+    if(f(l) * f(r) > 0)
     {
         cout << "Nema rozvyazku na promizku"<< endl;
         return 0;
@@ -49,20 +49,21 @@ double dyh::dihh()
 
     double c;
 
-    while((r - l) <= eps)
+    while(abs((r - l)) > eps)
     {
-        c = (l - r)/2;
+        c = (l + r) / 2;
         
-        if((f(l) * f(c)) < eps)
-        {
-            l = c;
-        }
-        else 
+        if((f(l) * f(c)) < 0)
         {
             r = c;
         }
+        else 
+        {
+            l = c;
+        }
     }
-    return (l + r) / 2;
+    double x = (l + r) / 2 ;
+    return x;
 }
 
 double dyh::newton(double poch)

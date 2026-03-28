@@ -1,6 +1,5 @@
 #ifndef h_h
 #define h_h
- 
 class dyh
 {
     private:
@@ -18,7 +17,4 @@ class dyh
         double dihh();
         double newton(double poch);
 };
-
-
-
 #endif
