@@ -20,9 +20,14 @@ double dyh::f(double x)
     return 3 * sin(sqrt(x)) + 0.35 * x - 3.8;
 }
 
+double dyh::f1(double x)
+{
+    return 3 * sin(sqrt(x)) + 0.35 * x - 3.8;
+}
+
 double dyh::df(double x)
 {
-    return (3 * cos(sqrt(x))) / (2 * sqrt(x)) + 0.35;
+    return (f(x + eps) - f(x)) / eps;
 }
 
 void dyh::inter(double a1, double b1)
@@ -88,3 +93,9 @@ double dyh::newton(double poch)
         x = x1;
     }
 }
+/*
+double f(double x)
+{
+    return 3 * sin(sqrt(x)) + 0.35 * x - 3.8;
+}
+*/

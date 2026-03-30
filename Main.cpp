@@ -15,8 +15,11 @@ int main()
     double res1 = r->newton(2.5);
 
     cout << "Dyhometria: "<< res << endl;
-    cout << "Newton: " << res1;
-    
+    cout << "Newton: " << res1 <<endl;
+
+
+    cout <<"Dyhometria perevirka: " << r->f1(res) << endl;
+    cout <<"Newton perevirka: " << r->f1(res1) << endl;
     delete r;
     return 0;
 }
