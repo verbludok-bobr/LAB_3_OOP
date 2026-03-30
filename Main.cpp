@@ -18,8 +18,8 @@ int main()
     cout << "Newton: " << res1 <<endl;
 
 
-    cout <<"Dyhometria perevirka: " << r->f1(res) << endl;
-    cout <<"Newton perevirka: " << r->f1(res1) << endl;
+    cout <<"Dyhometria perevirka: " << r->f1(res+1) << endl;
+    cout <<"Newton perevirka: " << r->f1(res1+1) << endl;
     delete r;
     return 0;
 }

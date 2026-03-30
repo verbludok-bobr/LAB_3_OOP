@@ -11,7 +11,6 @@ class dyh
         dyh();
         ~dyh();
 
-
         double f1(double x);
         void inter(double a1, double b1);
         void epsi(double eps1);
@@ -20,5 +19,6 @@ class dyh
         double newton(double poch);
 };
 
-double f(double x);
+//double f(double x);
+
 #endif

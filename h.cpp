@@ -22,7 +22,7 @@ double dyh::f(double x)
 
 double dyh::f1(double x)
 {
-    return 3 * sin(sqrt(x)) + 0.35 * x - 3.8;
+    return 3 * sin(sqrt(x)) + 0.6 * x - 3.8;
 }
 
 double dyh::df(double x)
